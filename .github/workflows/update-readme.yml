@@ -1,0 +1,60 @@
+name: Update Profile README
+
+on:
+  # Run on every push to main (immediate feedback when you edit the script)
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_profile_readme.py"
+      - "README.md"
+
+  # Run on a schedule - every 6 hours
+  schedule:
+    - cron: "0 */6 * * *"
+
+  # Allow running manually from the Actions tab
+  workflow_dispatch:
+
+# Only the minimum permissions required
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    # Prevent two runs from writing at the same time
+    permissions:
+      contents: write
+    concurrency:
+      group: update-readme
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run README updater
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          README_PATH: README.md
+          TOP_N: "3" # how many repos per section (optional, default 3)
+        run: python scripts/update_profile_readme.py
+
+      - name: Commit and push if README changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Exit cleanly when nothing changed (script already logs this case)
+          git diff --quiet README.md && echo "No changes." && exit 0
+
+          git add README.md
+          git commit -m "chore: auto-update README [skip ci]"
+          git push
