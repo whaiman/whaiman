@@ -1,0 +1,81 @@
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Backend Systems Engineer - whaiman</title>
+  <desc>GitHub profile header</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#0b0f14"/>
+      <stop offset="100%" stop-color="#0f1724"/>
+    </linearGradient>
+    <style>
+      .f { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+
+      @keyframes ripple1 {
+        0%   { r: 6;  opacity: 0.9; }
+        100% { r: 22; opacity: 0; }
+      }
+      @keyframes ripple2 {
+        0%   { r: 6;  opacity: 0.6; }
+        100% { r: 32; opacity: 0; }
+      }
+      @keyframes ripple3 {
+        0%   { r: 6;  opacity: 0.3; }
+        100% { r: 44; opacity: 0; }
+      }
+      @keyframes core {
+        0%,100% { opacity: 0.75; }
+        50%     { opacity: 1; }
+      }
+      @keyframes scan {
+        0%   { transform: translateX(-160px); opacity: 0; }
+        15%  { opacity: 0.18; }
+        85%  { opacity: 0.06; }
+        100% { transform: translateX(1360px); opacity: 0; }
+      }
+      @keyframes blink {
+        0%,49% { opacity: 1; }
+        50%,100% { opacity: 0; }
+      }
+
+      .ripple1 { animation: ripple1 2.6s ease-out infinite; }
+      .ripple2 { animation: ripple2 2.6s ease-out 0.4s infinite; }
+      .ripple3 { animation: ripple3 2.6s ease-out 0.8s infinite; }
+      .core    { animation: core 2.6s ease-in-out infinite; }
+      .scan    { animation: scan 7s linear infinite; }
+      .blink   { animation: blink 1.1s step-end infinite; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bg)"/>
+
+  <g opacity="0.045" stroke="#7dd3fc" stroke-width="0.5" fill="none">
+    <line x1="0" y1="70"  x2="1200" y2="70"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="150" y1="0" x2="150" y2="280"/>
+    <line x1="300" y1="0" x2="300" y2="280"/>
+    <line x1="450" y1="0" x2="450" y2="280"/>
+    <line x1="600" y1="0" x2="600" y2="280"/>
+    <line x1="750" y1="0" x2="750" y2="280"/>
+    <line x1="900" y1="0" x2="900" y2="280"/>
+    <line x1="1050" y1="0" x2="1050" y2="280"/>
+  </g>
+
+  <rect x="0" y="0" width="100" height="280" fill="#60a5fa" opacity="0.04" class="scan"/>
+
+  <g transform="translate(1090, 56)">
+    <circle class="ripple1" cx="0" cy="0" r="6" fill="none" stroke="#22c55e" stroke-width="1"/>
+    <circle class="ripple2" cx="0" cy="0" r="6" fill="none" stroke="#22c55e" stroke-width="0.6"/>
+    <circle class="ripple3" cx="0" cy="0" r="6" fill="none" stroke="#22c55e" stroke-width="0.3"/>
+    <circle class="core"    cx="0" cy="0" r="5" fill="#22c55e"/>
+  </g>
+
+  <text x="60" y="100" class="f" fill="#f1f5f9" font-size="48" font-weight="600" letter-spacing="-0.5">Backend Systems Engineer</text>
+
+  <text x="60" y="137" class="f" fill="#22c55e" font-size="22" letter-spacing="0.3">backend · databases · infrastructure · api design</text>
+
+  <text x="60" y="180" class="f" fill="#94a3b8" font-size="22">clean code · reliable by design · performance matters</text>
+
+  <text x="60" y="247" class="f" fill="#64748b" font-size="18" letter-spacing="0.2">backend runtime: active · architecture mode: modular · execution: deterministic<tspan class="blink" fill="#60a5fa">_</tspan></text>
+
+</svg>
