@@ -47,7 +47,7 @@ Infra: Linux · Docker · GitHub Actions
 | ------- | ----------- | -------- | ----- | ----- |
 | [`ping-pong-protocol`](https://github.com/whaiman/ping-pong-protocol) | Lightweight LAN discovery and secure communication protocol based on a ping–pong handshake | - | ★ 2 | - |
 | [`public-appeal-service`](https://github.com/whaiman/public-appeal-service) | A REST API for managing citizen appeals to government agencies - with AI-powered classification, role-based access control, and Redis caching. | `TypeScript` | ★ 2 | - |
-| [`sys-pulse`](https://github.com/whaiman/sys-pulse) | - | `Python` | ★ 1 | - |
+| [`FileServer`](https://github.com/whaiman/FileServer) | - | - | ★ 1 | - |
 <!-- AUTO: top-repos:END -->
 
 ---
