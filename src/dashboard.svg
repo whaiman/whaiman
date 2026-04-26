@@ -3,108 +3,188 @@
   <desc>Research status, current activity</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0%" stop-color="#060a10"/>
-      <stop offset="100%" stop-color="#0c1220"/>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%"   stop-color="#05080f"/>
+      <stop offset="100%" stop-color="#0b1525"/>
     </linearGradient>
+
+    <!-- Divider glow -->
     <linearGradient id="divblue" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="40%"  stop-color="#3b82f6" stop-opacity="0.7"/>
+      <stop offset="60%"  stop-color="#7c3aed" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
     </linearGradient>
+
+    <!-- Card fills -->
+    <linearGradient id="card1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%"   stop-color="#071120"/>
+      <stop offset="100%" stop-color="#060d1a"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%"   stop-color="#08051f"/>
+      <stop offset="100%" stop-color="#060d1a"/>
+    </linearGradient>
+
+    <!-- Orb glows -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#7c3aed" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#0e7490" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Header label glows -->
+    <filter id="glowBlue" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowPurple" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 
     <style>
-      .f{font-family:'JetBrains Mono','Fira Code','Courier New',monospace}
-      @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-      @keyframes pulse{0%,100%{opacity:.5;r:3}50%{opacity:1;r:4}}
-      @keyframes orb{0%,100%{opacity:.12}50%{opacity:.22}}
-      @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-      @keyframes scan{0%{transform:translateX(-140px);opacity:0}15%{opacity:.12}85%{opacity:.04}100%{transform:translateX(1340px);opacity:0}}
+      .f { font-family: 'JetBrains Mono','Fira Code','Courier New',monospace }
+      @keyframes fadeUp  { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+      @keyframes pulse   { 0%,100% { opacity:.55; r:3 } 50% { opacity:1; r:4.5 } }
+      @keyframes orb     { 0%,100% { opacity:.7 } 50% { opacity:1 } }
+      @keyframes blink   { 0%,49% { opacity:1 } 50%,100% { opacity:0 } }
+      @keyframes scan    { 0% { transform:translateX(-140px); opacity:0 } 15% { opacity:.08 } 85% { opacity:.03 } 100% { transform:translateX(1340px); opacity:0 } }
+      @keyframes shimmer { 0% { opacity:.04 } 50% { opacity:.09 } 100% { opacity:.04 } }
 
-      .fu{animation:fadeUp .7s .2s ease both}
-      .fu2{animation:fadeUp .7s .35s ease both}
-      .fu3{animation:fadeUp .7s .5s ease both}
-      .dot{animation:pulse 2.4s ease-in-out infinite}
-      .orb{animation:orb 4s ease-in-out infinite}
-      .sc{animation:scan 8s linear infinite}
-      .blink{animation:blink 1.1s step-end infinite}
+      .fu  { animation: fadeUp .7s .15s ease both }
+      .fu2 { animation: fadeUp .7s .30s ease both }
+      .fu3 { animation: fadeUp .7s .45s ease both }
+      .fu4 { animation: fadeUp .7s .60s ease both }
+      .dot { animation: pulse 2.4s ease-in-out infinite }
+      .orb { animation: orb   5s   ease-in-out infinite }
+      .sc  { animation: scan  9s   linear infinite }
+      .blink { animation: blink 1.1s step-end infinite }
+      .shim  { animation: shimmer 6s ease-in-out infinite }
     </style>
   </defs>
 
+  <!-- Base background -->
   <rect width="1200" height="340" fill="url(#bg)"/>
 
-  <circle cx="1000" cy="170" r="200" fill="#7c3aed" opacity=".04" class="orb"/>
-  <circle cx="600" cy="340" r="160" fill="#0e7490" opacity=".03" class="orb"/>
-  <circle cx="200" cy="100" r="180" fill="#1d4ed8" opacity=".03" class="orb"/>
+  <!-- Soft ambient orbs -->
+  <ellipse cx="180"  cy="120" rx="220" ry="160" fill="url(#orb1)" class="orb"/>
+  <ellipse cx="1020" cy="200" rx="240" ry="180" fill="url(#orb2)" class="orb" style="animation-delay:.8s"/>
+  <ellipse cx="600"  cy="340" rx="200" ry="130" fill="url(#orb3)" class="orb" style="animation-delay:1.6s"/>
 
-  <g opacity=".04" stroke="#7dd3fc" stroke-width=".4" fill="none">
-    <line x1="0" y1="85" x2="1200" y2="85"/>
+  <!-- Subtle grid -->
+  <g opacity=".06" stroke="#7dd3fc" stroke-width=".35" fill="none">
+    <line x1="0" y1="85"  x2="1200" y2="85"/>
     <line x1="0" y1="170" x2="1200" y2="170"/>
     <line x1="0" y1="255" x2="1200" y2="255"/>
-    <line x1="150" y1="0" x2="150" y2="340"/>
-    <line x1="300" y1="0" x2="300" y2="340"/>
-    <line x1="450" y1="0" x2="450" y2="340"/>
-    <line x1="600" y1="0" x2="600" y2="340"/>
-    <line x1="750" y1="0" x2="750" y2="340"/>
-    <line x1="900" y1="0" x2="900" y2="340"/>
+    <line x1="150"  y1="0" x2="150"  y2="340"/>
+    <line x1="300"  y1="0" x2="300"  y2="340"/>
+    <line x1="450"  y1="0" x2="450"  y2="340"/>
+    <line x1="600"  y1="0" x2="600"  y2="340"/>
+    <line x1="750"  y1="0" x2="750"  y2="340"/>
+    <line x1="900"  y1="0" x2="900"  y2="340"/>
     <line x1="1050" y1="0" x2="1050" y2="340"/>
   </g>
 
-  <rect x="0" y="0" width="90" height="340" fill="#3b82f6" opacity=".03" class="sc"/>
-  <rect x="1" y="1" width="1198" height="338" rx="6" fill="none" stroke="#1e3a52" stroke-width=".5"/>
+  <!-- Scan beam -->
+  <rect x="0" y="0" width="100" height="340" fill="#3b82f6" opacity=".07" class="sc"/>
 
-  <rect x="600" y="30" width="1" height="280" fill="url(#divblue)"/>
+  <!-- Outer border -->
+  <rect x="1" y="1" width="1198" height="338" rx="8" fill="none" stroke="#1e3a5c" stroke-width="1"/>
 
-  <!-- COL 1 -->
-  <text x="40" y="43" class="f" font-size="14" fill="#7dd3fc" letter-spacing=".15em" opacity=".9">RESEARCH</text>
-  <line x1="40" y1="52" x2="560" y2="52" stroke="#1e3a52" stroke-width=".5"/>
+  <!-- Shimmer top highlight -->
+  <rect x="1" y="1" width="1198" height="1" rx="0" fill="#3b82f6" opacity=".15" class="shim"/>
 
+  <!-- Center divider -->
+  <rect x="599" y="20" width="2" height="300" fill="url(#divblue)"/>
+
+  <!-- ═══════════════════ COL 1 — RESEARCH ═══════════════════ -->
+
+  <!-- Section header -->
+  <text x="40" y="42" class="f" font-size="11" fill="#7dd3fc" letter-spacing=".2em" font-weight="bold" filter="url(#glowBlue)">RESEARCH</text>
+  <line x1="40" y1="50" x2="565" y2="50" stroke="#1e3a5c" stroke-width=".8"/>
+
+  <!-- Card 1 — Orbital mechanics -->
   <g class="fu">
-    <rect x="40" y="64" width="520" height="74" rx="5" fill="#060d18" stroke="#1e3a5c" stroke-width=".5"/>
-    <circle cx="62" cy="84" r="3" fill="#4ade80" class="dot"/>
-    <text x="76" y="88" class="f" font-size="14" fill="#94a3b8">Orbital &amp; free-space mechanics</text>
-    <text x="76" y="105" class="f" font-size="12" fill="#475569">computing object motion in open space</text>
-    <text x="44" y="128" class="f" font-size="13" fill="#16a34a">in progress</text>
+    <rect x="40" y="62" width="522" height="76" rx="6" fill="url(#card1)" stroke="#1e4a7a" stroke-width="1"/>
+    <!-- Top accent line -->
+    <rect x="40" y="62" width="522" height="2" rx="1" fill="#3b82f6" opacity=".6"/>
+    <!-- Status dot -->
+    <circle cx="62" cy="83" r="4" fill="#22d3ee" class="dot"/>
+    <!-- Dot outer ring -->
+    <circle cx="62" cy="83" r="7" fill="none" stroke="#22d3ee" stroke-width=".5" opacity=".3"/>
+    <!-- Title -->
+    <text x="80" y="87" class="f" font-size="13.5" fill="#e2e8f0" font-weight="bold">Orbital &amp; free-space mechanics</text>
+    <!-- Subtitle -->
+    <text x="80" y="105" class="f" font-size="11" fill="#64748b">computing object motion in open space</text>
+    <!-- Status badge -->
+    <rect x="40" y="116" width="88" height="16" rx="3" fill="#052e16" stroke="#166534" stroke-width=".6"/>
+    <text x="50" y="128" class="f" font-size="10" fill="#4ade80" letter-spacing=".05em">⬤ in progress</text>
   </g>
 
+  <!-- Card 2 — Adaptive optical -->
   <g class="fu2">
-    <rect x="40" y="154" width="520" height="74" rx="5" fill="#060d18" stroke="#2d1f5e" stroke-width=".5"/>
-    <circle cx="62" cy="174" r="3" fill="#c4b5fd" class="dot"/>
-    <text x="76" y="178" class="f" font-size="14" fill="#94a3b8">Adaptive optical modulation (AI)</text>
-    <text x="76" y="195" class="f" font-size="12" fill="#475569">AI-driven modulation for telecom</text>
-    <text x="44" y="218" class="f" font-size="13" fill="#7c3aed">in progress</text>
+    <rect x="40" y="152" width="522" height="76" rx="6" fill="url(#card2)" stroke="#3b1f7a" stroke-width="1"/>
+    <rect x="40" y="152" width="522" height="2" rx="1" fill="#7c3aed" opacity=".7"/>
+    <circle cx="62" cy="173" r="4" fill="#c4b5fd" class="dot" style="animation-delay:.5s"/>
+    <circle cx="62" cy="173" r="7" fill="none" stroke="#c4b5fd" stroke-width=".5" opacity=".3"/>
+    <text x="80" y="177" class="f" font-size="13.5" fill="#e2e8f0" font-weight="bold">Adaptive optical modulation (AI)</text>
+    <text x="80" y="195" class="f" font-size="11" fill="#64748b">AI-driven modulation for telecom</text>
+    <rect x="40" y="206" width="88" height="16" rx="3" fill="#1a0a3d" stroke="#4c1d95" stroke-width=".6"/>
+    <text x="50" y="218" class="f" font-size="10" fill="#a78bfa" letter-spacing=".05em">⬤ in progress</text>
   </g>
 
+  <!-- Card 3 — Code note -->
   <g class="fu3">
-    <rect x="40" y="244" width="520" height="46" rx="5" fill="#060d18" stroke="#1e293b" stroke-width=".5"/>
-    <text x="56" y="263" class="f" font-size="12" fill="#334155">code.status</text>
-    <text x="56" y="280" class="f" font-size="13" fill="#60a5fa">will be published alongside each paper</text>
+    <rect x="40" y="242" width="522" height="52" rx="6" fill="#060c18" stroke="#1e293b" stroke-width=".8"/>
+    <text x="56" y="262" class="f" font-size="10.5" fill="#475569" letter-spacing=".08em">CODE.STATUS</text>
+    <text x="56" y="281" class="f" font-size="12.5" fill="#60a5fa">will be published alongside each paper</text>
   </g>
 
-  <!-- COL 2 -->
-  <text x="640" y="43" class="f" font-size="14" fill="#c4b5fd" letter-spacing=".15em" opacity=".9">CURRENT ACTIVITY</text>
-  <line x1="640" y1="52" x2="1160" y2="52" stroke="#1e293b" stroke-width=".5"/>
 
+  <!-- ═══════════════════ COL 2 — CURRENT ACTIVITY ═══════════════════ -->
+
+  <!-- Section header -->
+  <text x="640" y="42" class="f" font-size="11" fill="#c4b5fd" letter-spacing=".2em" font-weight="bold" filter="url(#glowPurple)">CURRENT ACTIVITY</text>
+  <line x1="640" y1="50" x2="1160" y2="50" stroke="#1e293b" stroke-width=".8"/>
+
+  <!-- Card A — Mode -->
   <g class="fu">
-    <rect x="640" y="64" width="520" height="58" rx="5" fill="#060d18" stroke="#1e3a5c" stroke-width=".5"/>
-    <text x="660" y="84" class="f" font-size="13" fill="#334155">mode</text>
-    <text x="660" y="104" class="f" font-size="15" fill="#60a5fa">building · researching</text>
+    <rect x="640" y="62" width="522" height="62" rx="6" fill="url(#card1)" stroke="#1e3a5c" stroke-width="1"/>
+    <rect x="640" y="62" width="522" height="2" rx="1" fill="#3b82f6" opacity=".5"/>
+    <text x="660" y="82" class="f" font-size="10.5" fill="#60a5fa" letter-spacing=".12em" opacity=".75">MODE</text>
+    <text x="660" y="106" class="f" font-size="15" fill="#93c5fd" font-weight="bold">building · researching</text>
   </g>
 
+  <!-- Card B — Interests -->
   <g class="fu2">
-    <rect x="640" y="134" width="520" height="58" rx="5" fill="#060d18" stroke="#2d1f5e" stroke-width=".5"/>
-    <text x="660" y="154" class="f" font-size="13" fill="#334155">interests beyond backend</text>
-    <text x="660" y="174" class="f" font-size="13" fill="#a78bfa">systems · physics · medicine</text>
+    <rect x="640" y="136" width="522" height="62" rx="6" fill="url(#card2)" stroke="#3b1f7a" stroke-width="1"/>
+    <rect x="640" y="136" width="522" height="2" rx="1" fill="#7c3aed" opacity=".5"/>
+    <text x="660" y="156" class="f" font-size="10.5" fill="#a78bfa" letter-spacing=".12em" opacity=".75">INTERESTS BEYOND BACKEND</text>
+    <text x="660" y="180" class="f" font-size="15" fill="#c4b5fd" font-weight="bold">systems · physics · medicine</text>
   </g>
 
+  <!-- Card C — Availability -->
   <g class="fu3">
-    <rect x="640" y="204" width="520" height="58" rx="5" fill="#060d18" stroke="#14532d" stroke-width=".5"/>
-    <text x="660" y="224" class="f" font-size="13" fill="#334155">availability</text>
-    <text x="660" y="244" class="f" font-size="13" fill="#4ade80">open to projects &amp; work</text>
+    <rect x="640" y="210" width="522" height="62" rx="6" fill="#060d12" stroke="#1a4a2e" stroke-width="1"/>
+    <rect x="640" y="210" width="522" height="2" rx="1" fill="#22c55e" opacity=".5"/>
+    <text x="660" y="230" class="f" font-size="10.5" fill="#4ade80" letter-spacing=".12em" opacity=".7">AVAILABILITY</text>
+    <text x="660" y="254" class="f" font-size="15" fill="#4ade80" font-weight="bold">open to projects &amp; work</text>
   </g>
 
-  <text x="640" y="294" class="f" font-size="12" fill="#3b82f6" opacity=".85">
-    whaiman · github.com/whaiman<tspan class="blink" fill="#60a5fa">_</tspan>
-  </text>
+  <!-- Footer link -->
+  <g class="fu4">
+    <text x="640" y="295" class="f" font-size="11.5" fill="#3b82f6" opacity=".9">
+      whaiman · github.com/whaiman<tspan class="blink" fill="#7dd3fc">_</tspan>
+    </text>
+  </g>
 
 </svg>

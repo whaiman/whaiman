@@ -18,11 +18,11 @@ Currently focused on backend systems, performance, and system design. -->
 
 ## Tech stack
 
-Languages: Python · TypeScript · JavaScript · Bash · SQL  
-Backend: FastAPI · Flask · Node.js · Express · NestJS  
-Data: PostgreSQL · MongoDB · Redis · SQLite  
-AI: LLM integrations (Ollama · Hugging Face · Claude · Groq)  
-Infra: Linux · Docker · GitHub Actions
+**Languages:** Python · TypeScript · JavaScript · Bash · SQL  
+**Backend:** FastAPI · Flask · Node.js · Express · NestJS  
+**Data:** PostgreSQL · MongoDB · Redis · SQLite  
+**AI:** LLM integrations (Ollama · Hugging Face · Claude · Groq)  
+**Infra:** Linux · Docker · GitHub Actions
 
 ---
 
