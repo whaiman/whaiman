@@ -48,7 +48,7 @@ Currently focused on backend systems, performance, and system design. -->
 | ------- | ----------- | -------- | ----- | ----- |
 | [`ping-pong-protocol`](https://github.com/whaiman/ping-pong-protocol) | Lightweight LAN discovery and secure communication protocol based on a ping–pong handshake | - | ★ 2 | - |
 | [`public-appeal-service`](https://github.com/whaiman/public-appeal-service) | A REST API for managing citizen appeals to government agencies - with AI-powered classification, role-based access control, and Redis caching. | `TypeScript` | ★ 2 | - |
-| [`FileServer`](https://github.com/whaiman/FileServer) | - | - | ★ 1 | - |
+| [`tf-idf`](https://github.com/whaiman/tf-idf) | TF-IDF text analysis tool with multi-language support | `Python` | ★ 1 | - |
 <!-- AUTO: top-repos:END -->
 
 ---
