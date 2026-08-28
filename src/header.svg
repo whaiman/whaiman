@@ -70,7 +70,7 @@
     <circle class="core"    cx="0" cy="0" r="5" fill="#22c55e"/>
   </g>
 
-  <text x="60" y="100" class="f" fill="#f1f5f9" font-size="48" font-weight="600" letter-spacing="-0.5">Fullstack & Software Engineer</text>
+  <text x="60" y="100" class="f" fill="#f1f5f9" font-size="48" font-weight="600" letter-spacing="-0.5">Fullstack &amp; Software Engineer</text>
 
   <text x="60" y="137" class="f" fill="#22c55e" font-size="22" letter-spacing="0.3">fullstack systems · applied ml · infrastructure · architecture</text>
 
