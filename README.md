@@ -1,12 +1,6 @@
 # Hi there 👋
 
-<!-- ## I'm -->
-
 ![Header](./src/header.svg)
-
-<!-- Backend developer with an engineering mindset, focused on reliable systems and clean architecture.
-Interested in physics and medicine as disciplines where precision, causality, and verification matter.
-Currently focused on backend systems, performance, and system design. -->
 
 > _I, I went to front(end) and back(end)_  
 > _To find myself on track_  
@@ -19,9 +13,9 @@ Currently focused on backend systems, performance, and system design. -->
 ## Tech stack
 
 **Languages:** Python · TypeScript · JavaScript · Bash · SQL  
-**Backend:** FastAPI · Flask · Node.js · Express · NestJS  
-**Data:** PostgreSQL · MongoDB · Redis · SQLite  
-**AI:** LLM integrations (Ollama · Hugging Face · Claude · Groq)  
+**Frameworks:** FastAPI · Flask · Node.js · Express · NestJS · Next.js · React.js
+**Data:** PostgreSQL · MongoDB · Redis · SQLite · Supabase
+**AI:** OpenAI · Claude · Hugging Face · OpenRouter · Groq
 **Infra:** Linux · Docker · GitHub Actions
 
 ---
@@ -55,13 +49,6 @@ Currently focused on backend systems, performance, and system design. -->
 
 ![Dashboard](./src//dashboard.svg)
 
-<!-- ## Research
-
-Working on two papers, code will be published here alongside each:
-
-- **Orbital & free-space mechanics** — computing object motion in open space under zero-gravity conditions
-- **Adaptive optical modulation using AI** — AI-driven modulation schemes for telecommunications -->
-
 ---
 
 ## Stats
@@ -83,3 +70,4 @@ I use generative AI only where it serves as a tool for testing, validation, or i
 [![GitHub](https://img.shields.io/badge/GitHub-whaiman-181717?style=flat&logo=github)](https://github.com/whaiman)
 [![Telegram](https://img.shields.io/badge/Telegram-thePrizmatic-26A5E4?style=flat&logo=telegram&logoColor=fff)](https://t.me/theprizmatic)
 [![Gmail](https://img.shields.io/badge/Gmail-whaiman.me@gmail.com-EA4335?style=flat&logo=gmail&logoColor=fff)](mailto:whaiman.me@gmail.com)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/whaiman)
