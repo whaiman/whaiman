@@ -34,8 +34,9 @@ Currently focused on backend systems, performance, and system design. -->
 | [`remote-compiler`](https://github.com/whaiman/remote-compiler) | Lightweight secure remote C/C++ compiler with end-to-end encryption for offloading builds from resource-constrained devices to powerful servers | `Python` |
 | [`typecore`](https://github.com/whaiman/typecore) | Header-only C++17 library for automatic runtime type detection from strings | `C++` |
 | [`adaptive-optical-modulation-ai`](https://github.com/whaiman/adaptive-optical-modulation-ai) | This repository contains the reference implementation of the Adaptive Optical Modulation method | - |
-| [`ping-pong-protocol`](https://github.com/whaiman/ping-pong-protocol) | Lightweight LAN discovery and secure communication protocol based on a ping–pong handshake | - |
 | [`public-appeal-service`](https://github.com/whaiman/public-appeal-service) | A REST API for managing citizen appeals to government agencies - with AI-powered classification, role-based access control, and Redis caching. | `TypeScript` |
+| [`ping-pong-protocol`](https://github.com/whaiman/ping-pong-protocol) | Lightweight LAN discovery and secure communication protocol based on a ping–pong handshake | - |
+| [`cache-store`](https://github.com/whaiman/cache-store) | A minimal in-memory TCP key–value cache with TTL, binary protocol and event loop. | - |
 <!-- AUTO: active-repos:END -->
 
 ---
@@ -45,9 +46,9 @@ Currently focused on backend systems, performance, and system design. -->
 <!-- AUTO: top-repos:START -->
 | Project | Description | Language | Stars | Forks |
 | ------- | ----------- | -------- | ----- | ----- |
-| [`ping-pong-protocol`](https://github.com/whaiman/ping-pong-protocol) | Lightweight LAN discovery and secure communication protocol based on a ping–pong handshake | - | ★ 2 | - |
+| [`kiosk`](https://github.com/whaiman/kiosk) | A terminal RSS/Atom reader built with Textual. Stop by, read, move on - no tracking, no algorithm, no account. | `Python` | ★ 3 | - |
 | [`public-appeal-service`](https://github.com/whaiman/public-appeal-service) | A REST API for managing citizen appeals to government agencies - with AI-powered classification, role-based access control, and Redis caching. | `TypeScript` | ★ 2 | - |
-| [`FileServer`](https://github.com/whaiman/FileServer) | - | - | ★ 1 | - |
+| [`ping-pong-protocol`](https://github.com/whaiman/ping-pong-protocol) | Lightweight LAN discovery and secure communication protocol based on a ping–pong handshake | - | ★ 2 | - |
 <!-- AUTO: top-repos:END -->
 
 ---
