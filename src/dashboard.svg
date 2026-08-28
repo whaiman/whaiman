@@ -169,7 +169,7 @@
     <rect x="640" y="136" width="522" height="62" rx="6" fill="url(#card2)" stroke="#3b1f7a" stroke-width="1"/>
     <rect x="640" y="136" width="522" height="2" rx="1" fill="#7c3aed" opacity=".5"/>
     <text x="660" y="156" class="f" font-size="10.5" fill="#a78bfa" letter-spacing=".12em" opacity=".75">INTERESTS BEYOND BACKEND</text>
-    <text x="660" y="180" class="f" font-size="15" fill="#c4b5fd" font-weight="bold">systems · physics · medicine</text>
+    <text x="660" y="180" class="f" font-size="15" fill="#c4b5fd" font-weight="bold">systems design · applied physics · medtech</text>
   </g>
 
   <!-- Card C — Availability -->
@@ -177,7 +177,7 @@
     <rect x="640" y="210" width="522" height="62" rx="6" fill="#060d12" stroke="#1a4a2e" stroke-width="1"/>
     <rect x="640" y="210" width="522" height="2" rx="1" fill="#22c55e" opacity=".5"/>
     <text x="660" y="230" class="f" font-size="10.5" fill="#4ade80" letter-spacing=".12em" opacity=".7">AVAILABILITY</text>
-    <text x="660" y="254" class="f" font-size="15" fill="#4ade80" font-weight="bold">open to projects &amp; work</text>
+    <text x="660" y="254" class="f" font-size="15" fill="#4ade80" font-weight="bold">open to new opportunities &amp; r&amp;d projects</text>
   </g>
 
   <!-- Footer link -->

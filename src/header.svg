@@ -1,5 +1,5 @@
 <svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" role="img">
-  <title>Backend Systems Engineer - whaiman</title>
+  <title>Software Engineer - whaiman</title>
   <desc>GitHub profile header</desc>
 
   <defs>
@@ -70,12 +70,12 @@
     <circle class="core"    cx="0" cy="0" r="5" fill="#22c55e"/>
   </g>
 
-  <text x="60" y="100" class="f" fill="#f1f5f9" font-size="48" font-weight="600" letter-spacing="-0.5">Backend Systems Engineer</text>
+  <text x="60" y="100" class="f" fill="#f1f5f9" font-size="48" font-weight="600" letter-spacing="-0.5">Fullstack & Software Engineer</text>
 
-  <text x="60" y="137" class="f" fill="#22c55e" font-size="22" letter-spacing="0.3">backend · databases · infrastructure · api design</text>
+  <text x="60" y="137" class="f" fill="#22c55e" font-size="22" letter-spacing="0.3">fullstack systems · applied ml · infrastructure · architecture</text>
 
   <text x="60" y="180" class="f" fill="#94a3b8" font-size="22">clean code · reliable by design · performance matters</text>
 
-  <text x="60" y="247" class="f" fill="#64748b" font-size="18" letter-spacing="0.2">backend runtime: active · architecture mode: modular · execution: deterministic<tspan class="blink" fill="#60a5fa">_</tspan></text>
+  <text x="60" y="247" class="f" fill="#64748b" font-size="18" letter-spacing="0.2">runtime: active · architecture mode: modular · execution: deterministic<tspan class="blink" fill="#60a5fa">_</tspan></text>
 
 </svg>
